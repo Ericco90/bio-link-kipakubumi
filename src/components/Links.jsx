@@ -8,8 +8,7 @@ const Links = () => {
       desc: 'Belajar spiritual secara langsung dengan metode yang mudah dipahami dan diterapkan.',
       btnText: 'Masuk Sekarang',
       icon: <GraduationCap size={20} />,
-      url: 'https://drive.google.com/drive/folders/19JINyJUg1Ib-Ba6_VbZNPR_ETi28YDQA?usp=drive_link
-‎'
+      url: 'https://drive.google.com/drive/folders/19JINyJUg1Ib-Ba6_VbZNPR_ETi28YDQA?usp=drive_link'
     },
     {
       title: 'Private Paket Gemblengan',
@@ -23,7 +22,7 @@ const Links = () => {
       desc: 'Pendalaman keilmuan spiritual secara bertahap dan terarah.',
       btnText: 'Pelajari Lebih Lanjut',
       icon: <Sparkles size={20} />,
-      url: '‎https://drive.google.com/drive/folders/1iI65T1ScOD_K3ZTDF7UIObhtaZ4oW7Ao?usp=drive_link'
+      url: 'https://drive.google.com/drive/folders/1iI65T1ScOD_K3ZTDF7UIObhtaZ4oW7Ao?usp=drive_link'
     },
     {
       title: 'Toko Online Payung Agung',
