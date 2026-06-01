@@ -44,12 +44,12 @@ const Hero = () => {
       </p>
       
       <div className="glass-panel" style={{ padding: '24px', marginTop: '30px', textAlign: 'left' }}>
-        <h2 style={{ fontSize: '1.5rem', marginBottom: '12px', textAlign: 'center' }}>Selamat Datang</h2>
-        <p style={{ lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '16px', color: 'var(--text-main)' }}>
-          Membuka jalan menuju pengembangan diri, ketenangan batin, serta pemahaman spiritual yang bertanggung jawab dan berlandaskan nilai luhur Nusantara.
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '12px', textAlign: 'center' }}>Gerbang Kesadaran Sejati</h2>
+        <p style={{ lineHeight: '1.7', fontSize: '0.95rem', marginBottom: '16px', color: 'var(--text-main)', textAlign: 'center', fontStyle: 'italic' }}>
+          "Menyelami kedalaman batin, menggali potensi diri berlandaskan kearifan warisan leluhur Nusantara."
         </p>
         <p style={{ lineHeight: '1.6', fontSize: '0.95rem', color: 'var(--text-muted)' }}>
-          Selama bertahun-tahun mendampingi masyarakat dalam pembelajaran spiritual, pembinaan energi batin, pengembangan keilmuan, serta pendampingan legalitas lembaga spiritual di Indonesia.
+          Kami hadir untuk mendampingi setiap langkah perjalanan spiritual Anda—membimbing pencapaian ketenangan jiwa, penguasaan energi batin, hingga pemahaman keilmuan tingkat tinggi secara terarah, etis, dan profesional. Bersama <strong>Payung Agung Nusantara</strong>, mari wujudkan kualitas hidup yang lebih damai dan bermakna.
         </p>
       </div>
     </div>
