@@ -1,4 +1,5 @@
 import React from 'react';
+import profileImg from '../assets/profile.jpg';
 
 const Hero = () => {
   return (
@@ -16,7 +17,7 @@ const Hero = () => {
         className="glow-effect"
       >
         <img 
-          src="/profile.jpg" 
+          src={profileImg} 
           alt="KI PAKU BUMI" 
           style={{
             width: '100%',

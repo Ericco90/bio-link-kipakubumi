@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import logoImg from '../assets/logo.jpg';
 
 const LoadingScreen = ({ onComplete }) => {
   const [opacity, setOpacity] = useState(1);
@@ -45,7 +46,7 @@ const LoadingScreen = ({ onComplete }) => {
         }}
       >
         <img 
-          src="/logo.jpg" 
+          src={logoImg} 
           alt="Logo Payung Agung" 
           style={{
             width: '100%',
