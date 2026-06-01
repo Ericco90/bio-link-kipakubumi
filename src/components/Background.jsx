@@ -1,44 +1,42 @@
 import React, { useEffect, useState } from 'react';
 
 const Background = () => {
-  const [particles, setParticles] = useState([]);
+  const [meteors, setMeteors] = useState([]);
 
   useEffect(() => {
-    // Generate random particles
-    const particleCount = 45;
-    const newParticles = Array.from({ length: particleCount }).map((_, i) => {
-      const size = Math.random() * 4 + 1;
+    // Generate random meteors
+    const meteorCount = 15;
+    const newMeteors = Array.from({ length: meteorCount }).map((_, i) => {
       return {
         id: i,
-        left: `${Math.random() * 100}%`,
-        width: `${size}px`,
-        height: `${size}px`,
-        animationDuration: `${Math.random() * 10 + 10}s`,
-        animationDelay: `${Math.random() * 5}s`,
+        top: `${Math.random() * 80 - 20}%`, // Start slightly above viewport to middle
+        left: `${Math.random() * 80 + 20}%`, // Start from center to far right
+        animationDuration: `${Math.random() * 4 + 2}s`, // Fast meteors
+        animationDelay: `${Math.random() * 15}s`,
       };
     });
-    setParticles(newParticles);
+    setMeteors(newMeteors);
   }, []);
 
   return (
-    <>
-      <div className="bg-particles">
-        {particles.map((p) => (
-          <div
-            key={p.id}
-            className="particle"
-            style={{
-              left: p.left,
-              width: p.width,
-              height: p.height,
-              animationDuration: p.animationDuration,
-              animationDelay: p.animationDelay,
-            }}
-          />
-        ))}
-      </div>
-      <div className="smoke-overlay" />
-    </>
+    <div className="bg-particles">
+      {/* Starry background */}
+      <div className="stars"></div>
+      
+      {/* Meteors */}
+      {meteors.map((m) => (
+        <div
+          key={m.id}
+          className="meteor"
+          style={{
+            top: m.top,
+            left: m.left,
+            animationDuration: m.animationDuration,
+            animationDelay: m.animationDelay,
+          }}
+        />
+      ))}
+    </div>
   );
 };
 
