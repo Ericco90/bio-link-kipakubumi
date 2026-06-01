@@ -1,28 +1,31 @@
 import React from 'react';
-import { ChevronRight, GraduationCap, Flame, Sparkles, Store, Music, Users, Camera, Video, Globe } from 'lucide-react';
+import { ChevronRight, GraduationCap, Flame, Sparkles, Store, Music, Users, Camera, Video, Globe, MessageCircle } from 'lucide-react';
 
 const Links = () => {
   const linksData = [
     {
       title: 'Private Spiritual Langsung Praktek',
       desc: 'Belajar spiritual secara langsung dengan metode yang mudah dipahami dan diterapkan.',
-      btnText: 'Masuk Sekarang',
+      btnText: 'Materi & Harga (Google Drive)',
       icon: <GraduationCap size={20} />,
-      url: 'https://drive.google.com/drive/folders/19JINyJUg1Ib-Ba6_VbZNPR_ETi28YDQA?usp=drive_link'
+      url: 'https://drive.google.com/drive/folders/1iI65T1ScOD_K3ZTDF7UIObhtaZ4oW7Ao',
+      waUrl: 'https://wa.me/6285123722019?text=Halo%20Ki%20Paku%20Bumi,%20saya%20tertarik%20untuk%20mengikuti%20kelas%20Private%20Spiritual%20Langsung%20Praktek.%20Mohon%20info%20lebih%20lanjut.'
     },
     {
       title: 'Private Paket Gemblengan',
       desc: 'Program pembinaan intensif untuk mempercepat perkembangan spiritual.',
-      btnText: 'Ikuti Program',
+      btnText: 'Materi & Harga (Google Drive)',
       icon: <Flame size={20} />,
-      url: 'https://drive.google.com/drive/folders/19JINyJUg1Ib-Ba6_VbZNPR_ETi28YDQA?usp=drive_link'
+      url: 'https://drive.google.com/drive/folders/19JINyJUg1Ib-Ba6_VbZNPR_ETi28YDQA?usp=drive_link',
+      waUrl: 'https://wa.me/6285123722019?text=Halo%20Ki%20Paku%20Bumi,%20saya%20tertarik%20untuk%20mengikuti%20Private%20Paket%20Gemblengan.%20Mohon%20info%20lebih%20lanjut.'
     },
     {
       title: 'Private Keilmuan Spiritual',
       desc: 'Pendalaman keilmuan spiritual secara bertahap dan terarah.',
-      btnText: 'Pelajari Lebih Lanjut',
+      btnText: 'Materi & Harga (Google Drive)',
       icon: <Sparkles size={20} />,
-      url: 'https://drive.google.com/drive/folders/1iI65T1ScOD_K3ZTDF7UIObhtaZ4oW7Ao?usp=drive_link'
+      url: 'https://drive.google.com/drive/folders/1iI65T1ScOD_K3ZTDF7UIObhtaZ4oW7Ao?usp=drive_link',
+      waUrl: 'https://wa.me/6285123722019?text=Halo%20Ki%20Paku%20Bumi,%20saya%20tertarik%20untuk%20mengikuti%20Private%20Keilmuan%20Spiritual.%20Mohon%20info%20lebih%20lanjut.'
     },
     {
       title: 'Toko Online Payung Agung',
@@ -35,7 +38,7 @@ const Links = () => {
       title: 'TikTok KI PAKU BUMI',
       desc: 'Inspirasi dan edukasi spiritual harian.',
       btnText: 'Kunjungi',
-      icon: <Music size={20} />, // Using Music as TikTok icon placeholder
+      icon: <Music size={20} />, 
       url: '#'
     },
     {
@@ -83,12 +86,13 @@ const Links = () => {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         {linksData.map((link, i) => (
-          <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '8px' }}>
             <div style={{ padding: '0 8px' }}>
               <h4 style={{ fontSize: '1rem', color: 'var(--color-gold)', marginBottom: '4px' }}>{link.title}</h4>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{link.desc}</p>
             </div>
-            <a href={link.url} className="premium-btn">
+            
+            <a href={link.url} target="_blank" rel="noopener noreferrer" className="premium-btn">
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <div className="icon-wrapper">
                   {link.icon}
@@ -97,6 +101,22 @@ const Links = () => {
               </div>
               <ChevronRight size={20} style={{ color: 'var(--color-gold)' }} />
             </a>
+
+            {link.waUrl && (
+              <a href={link.waUrl} target="_blank" rel="noopener noreferrer" className="premium-btn" style={{ 
+                marginTop: '-8px', 
+                background: 'linear-gradient(145deg, rgba(37, 211, 102, 0.15) 0%, rgba(18, 140, 126, 0.1) 100%)',
+                borderColor: 'rgba(37, 211, 102, 0.3)'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div className="icon-wrapper" style={{ background: 'rgba(37, 211, 102, 0.2)', color: '#25D366' }}>
+                    <MessageCircle size={20} />
+                  </div>
+                  <span style={{ color: '#25D366' }}>Daftar via WhatsApp</span>
+                </div>
+                <ChevronRight size={20} style={{ color: '#25D366' }} />
+              </a>
+            )}
           </div>
         ))}
       </div>
