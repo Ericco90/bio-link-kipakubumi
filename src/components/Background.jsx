@@ -5,15 +5,18 @@ const Background = () => {
 
   useEffect(() => {
     // Generate random particles
-    const particleCount = 20;
-    const newParticles = Array.from({ length: particleCount }).map((_, i) => ({
-      id: i,
-      left: `${Math.random() * 100}%`,
-      width: `${Math.random() * 6 + 2}px`,
-      height: `${Math.random() * 6 + 2}px`,
-      animationDuration: `${Math.random() * 10 + 10}s`,
-      animationDelay: `${Math.random() * 5}s`,
-    }));
+    const particleCount = 45;
+    const newParticles = Array.from({ length: particleCount }).map((_, i) => {
+      const size = Math.random() * 4 + 1;
+      return {
+        id: i,
+        left: `${Math.random() * 100}%`,
+        width: `${size}px`,
+        height: `${size}px`,
+        animationDuration: `${Math.random() * 10 + 10}s`,
+        animationDelay: `${Math.random() * 5}s`,
+      };
+    });
     setParticles(newParticles);
   }, []);
 
