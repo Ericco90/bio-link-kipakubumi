@@ -182,10 +182,27 @@ const Links = () => {
                 fontSize: '0.85rem', 
                 color: 'var(--text-main)', 
                 lineHeight: '1.3',
-                fontWeight: '600'
+                fontWeight: '600',
+                marginBottom: '12px'
               }}>
                 {menu.title}
               </h4>
+              <div style={{
+                marginTop: 'auto',
+                background: 'rgba(212, 175, 55, 0.15)',
+                padding: '4px 10px',
+                borderRadius: '12px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px',
+                color: 'var(--color-gold)',
+                fontSize: '0.75rem',
+                fontWeight: '600',
+                border: '1px solid rgba(212, 175, 55, 0.3)'
+              }} className="pulse-btn">
+                <span>Klik Detail</span>
+                <ChevronRight size={14} className="bounce-horizontal" />
+              </div>
             </div>
           ))}
         </div>

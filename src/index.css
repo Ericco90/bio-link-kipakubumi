@@ -150,6 +150,25 @@ a {
   border-color: var(--color-gold) !important;
 }
 
+@keyframes pulseBtn {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 6px rgba(212, 175, 55, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+.pulse-btn {
+  animation: pulseBtn 2s infinite;
+}
+
+@keyframes bounceHoriz {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+
+.bounce-horizontal {
+  animation: bounceHoriz 1s infinite;
+}
+
 /* Layout utilities */
 .container {
   max-width: 600px;
