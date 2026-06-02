@@ -64,7 +64,7 @@ const Links = () => {
       desc: 'Berbagai kebutuhan dan sarana spiritual pilihan.',
       btnText: 'Kunjungi Toko',
       icon: <Store size={20} />,
-      url: '#'
+      url: 'https://produk.ikatanspiritualindonesia.com/'
     },
     {
       title: 'TikTok KI PAKU BUMI',
