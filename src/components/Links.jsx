@@ -71,28 +71,28 @@ const Links = () => {
       desc: 'Inspirasi dan edukasi spiritual harian.',
       btnText: 'Kunjungi',
       icon: <Music size={20} />, 
-      url: '#'
+      url: 'https://www.tiktok.com/@kipakubumi'
     },
     {
       title: 'Facebook KI PAKU BUMI',
       desc: 'Informasi kegiatan dan komunitas spiritual.',
       btnText: 'Kunjungi',
       icon: <Users size={20} />,
-      url: '#'
+      url: 'https://web.facebook.com/sastra.ningrat.37?_rdc=1&_rdr#'
     },
     {
       title: 'Instagram KI PAKU BUMI',
       desc: 'Konten edukasi dan dokumentasi kegiatan.',
       btnText: 'Kunjungi',
       icon: <Camera size={20} />,
-      url: '#'
+      url: 'https://www.instagram.com/kipakubumi81'
     },
     {
       title: 'YouTube KI PAKU BUMI',
       desc: 'Video pembelajaran spiritual dan kajian Nusantara.',
       btnText: 'Tonton Sekarang',
       icon: <Video size={20} />,
-      url: '#'
+      url: 'https://www.youtube.com/@kipakubumichannel'
     },
     {
       title: 'Website Yayasan Ikatan Spiritual Indonesia',
