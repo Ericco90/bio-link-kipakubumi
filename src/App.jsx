@@ -20,9 +20,9 @@ function App() {
       
       <div className="container" style={{ opacity: loading ? 0 : 1, transition: 'opacity 0.5s ease' }}>
         <Hero />
+        <Links />
         <Stats />
         <Services />
-        <Links />
         <Testimonials />
         <Footer />
       </div>

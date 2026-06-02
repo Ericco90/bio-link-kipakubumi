@@ -26,25 +26,17 @@ const Links = () => {
     return () => { document.body.style.overflow = 'unset'; }
   }, [activeGallery]);
 
-  const linksData = [
+  const privateMenus = [
     {
-      title: 'Private Spiritual Langsung Praktek',
-      desc: 'Belajar spiritual secara langsung dengan metode yang mudah dipahami dan diterapkan.',
+      title: 'Privat Keilmuan',
+      desc: 'Pendalaman keilmuan spiritual secara bertahap dan terarah.',
       btnText: 'Lihat Materi & Harga',
       icon: <GraduationCap size={20} />,
-      images: imagesSpiritualPraktek,
-      waUrl: 'https://wa.me/6285123722019?text=Halo%20Ki%20Paku%20Bumi,%20saya%20tertarik%20untuk%20mengikuti%20kelas%20Private%20Spiritual%20Langsung%20Praktek.%20Mohon%20info%20lebih%20lanjut.'
+      images: imagesKeilmuanSpiritual,
+      waUrl: 'https://wa.me/6285123722019?text=Halo%20Ki%20Paku%20Bumi,%20saya%20tertarik%20untuk%20mengikuti%20Private%20Keilmuan.%20Mohon%20info%20lebih%20lanjut.'
     },
     {
-      title: 'Private Paket Gemblengan (Padepokan)',
-      desc: 'Program pembinaan intensif untuk mempercepat perkembangan spiritual.',
-      btnText: 'Lihat Materi & Harga',
-      icon: <Flame size={20} />,
-      images: imagesPaketPadepokan,
-      waUrl: 'https://wa.me/6285123722019?text=Halo%20Ki%20Paku%20Bumi,%20saya%20tertarik%20untuk%20mengikuti%20Private%20Paket%20Gemblengan.%20Mohon%20info%20lebih%20lanjut.'
-    },
-    {
-      title: 'Private Paket Keilmuan',
+      title: 'Privat Paket Keilmuan',
       desc: 'Pendalaman keilmuan spiritual secara terpadu dalam satu paket khusus.',
       btnText: 'Lihat Materi & Harga',
       icon: <Sparkles size={20} />,
@@ -52,123 +44,172 @@ const Links = () => {
       waUrl: 'https://wa.me/6285123722019?text=Halo%20Ki%20Paku%20Bumi,%20saya%20tertarik%20untuk%20mengikuti%20Private%20Paket%20Keilmuan.%20Mohon%20info%20lebih%20lanjut.'
     },
     {
-      title: 'Private Keilmuan Spiritual',
-      desc: 'Pendalaman keilmuan spiritual secara bertahap dan terarah.',
+      title: 'Privat Spiritual Langsung Praktek',
+      desc: 'Belajar spiritual secara langsung dengan metode yang mudah dipahami dan diterapkan.',
       btnText: 'Lihat Materi & Harga',
       icon: <GraduationCap size={20} />,
-      images: imagesKeilmuanSpiritual,
-      waUrl: 'https://wa.me/6285123722019?text=Halo%20Ki%20Paku%20Bumi,%20saya%20tertarik%20untuk%20mengikuti%20Private%20Keilmuan%20Spiritual.%20Mohon%20info%20lebih%20lanjut.'
+      images: imagesSpiritualPraktek,
+      waUrl: 'https://wa.me/6285123722019?text=Halo%20Ki%20Paku%20Bumi,%20saya%20tertarik%20untuk%20mengikuti%20kelas%20Private%20Spiritual%20Langsung%20Praktek.%20Mohon%20info%20lebih%20lanjut.'
     },
     {
-      title: 'Toko Online Payung Agung',
+      title: 'Privat Khusus Padepokan',
+      desc: 'Program pembinaan intensif untuk mempercepat perkembangan spiritual.',
+      btnText: 'Lihat Materi & Harga',
+      icon: <Flame size={20} />,
+      images: imagesPaketPadepokan,
+      waUrl: 'https://wa.me/6285123722019?text=Halo%20Ki%20Paku%20Bumi,%20saya%20tertarik%20untuk%20mengikuti%20Private%20Khusus%20Padepokan.%20Mohon%20info%20lebih%20lanjut.'
+    },
+    {
+      title: 'Pemaharan Produk Media',
       desc: 'Berbagai kebutuhan dan sarana spiritual pilihan.',
       btnText: 'Kunjungi Toko',
       icon: <Store size={20} />,
       url: 'https://produk.ikatanspiritualindonesia.com/'
+    }
+  ];
+
+  const otherLinks = [
+    {
+      title: 'Website Resmi',
+      desc: 'Informasi organisasi dan legalitas spiritual Indonesia.',
+      btnText: 'Buka Website',
+      icon: <Globe size={20} />,
+      url: '#'
     },
     {
-      title: 'TikTok KI PAKU BUMI',
-      desc: 'Inspirasi dan edukasi spiritual harian.',
-      btnText: 'Kunjungi',
-      icon: <Music size={20} />, 
-      url: 'https://www.tiktok.com/@kipakubumi'
-    },
-    {
-      title: 'Facebook KI PAKU BUMI',
+      title: 'Facebook',
       desc: 'Informasi kegiatan dan komunitas spiritual.',
       btnText: 'Kunjungi',
       icon: <Users size={20} />,
       url: 'https://web.facebook.com/sastra.ningrat.37?_rdc=1&_rdr#'
     },
     {
-      title: 'Instagram KI PAKU BUMI',
+      title: 'Instagram',
       desc: 'Konten edukasi dan dokumentasi kegiatan.',
       btnText: 'Kunjungi',
       icon: <Camera size={20} />,
       url: 'https://www.instagram.com/kipakubumi81'
     },
     {
-      title: 'YouTube KI PAKU BUMI',
+      title: 'TikTok',
+      desc: 'Inspirasi dan edukasi spiritual harian.',
+      btnText: 'Kunjungi',
+      icon: <Music size={20} />, 
+      url: 'https://www.tiktok.com/@kipakubumi'
+    },
+    {
+      title: 'YouTube',
       desc: 'Video pembelajaran spiritual dan kajian Nusantara.',
       btnText: 'Tonton Sekarang',
       icon: <Video size={20} />,
       url: 'https://www.youtube.com/@kipakubumichannel'
-    },
-    {
-      title: 'Website Yayasan Ikatan Spiritual Indonesia',
-      desc: 'Informasi organisasi dan legalitas spiritual Indonesia.',
-      btnText: 'Buka Website',
-      icon: <Globe size={20} />,
-      url: '#'
     }
   ];
 
+  const renderLinkItem = (link, isPrivate = false) => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '8px', flex: 1 }}>
+      <div style={{ padding: '0 8px' }}>
+        <h4 style={{ fontSize: '1rem', color: 'var(--color-gold)', marginBottom: '4px' }}>{link.title}</h4>
+        <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{link.desc}</p>
+      </div>
+      
+      <div style={{ marginTop: 'auto' }}>
+        {link.images ? (
+          <button 
+            onClick={() => setActiveGallery({ title: link.title, images: link.images })} 
+            className="premium-btn w-full text-left" 
+            style={{ background: 'transparent', border: 'none', padding: 0, outline: 'none' }}
+          >
+            <div className="premium-btn" style={{ width: '100%', boxSizing: 'border-box' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div className="icon-wrapper">
+                  {link.icon}
+                </div>
+                <span>{link.btnText}</span>
+              </div>
+              <ChevronRight size={20} style={{ color: 'var(--color-gold)' }} />
+            </div>
+          </button>
+        ) : (
+          <a href={link.url} target="_blank" rel="noopener noreferrer" className="premium-btn">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div className="icon-wrapper">
+                {link.icon}
+              </div>
+              <span>{link.btnText}</span>
+            </div>
+            <ChevronRight size={20} style={{ color: 'var(--color-gold)' }} />
+          </a>
+        )}
+
+        {link.waUrl && (
+          <a href={link.waUrl} target="_blank" rel="noopener noreferrer" className="premium-btn" style={{ 
+            marginTop: '-8px', 
+            background: 'linear-gradient(145deg, rgba(37, 211, 102, 0.15) 0%, rgba(18, 140, 126, 0.1) 100%)',
+            borderColor: 'rgba(37, 211, 102, 0.3)'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div className="icon-wrapper" style={{ background: 'rgba(37, 211, 102, 0.2)', color: '#25D366' }}>
+                <MessageCircle size={20} />
+              </div>
+              <span style={{ color: '#25D366' }}>Daftar via WhatsApp</span>
+            </div>
+            <ChevronRight size={20} style={{ color: '#25D366' }} />
+          </a>
+        )}
+      </div>
+    </div>
+  );
+
   return (
     <div className="section animate-fade-in-up delay-300">
-      <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-        <p style={{ fontSize: '1.05rem', lineHeight: '1.6', marginBottom: '16px', color: 'var(--text-main)' }}>
-          "Setiap perjalanan spiritual membutuhkan bimbingan yang tepat."
-        </p>
-        <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)' }}>
-          Temukan pembelajaran, pendampingan, dan wawasan spiritual yang dapat membantu Anda berkembang secara lahir maupun batin.
-          <br /><br />
-          Silakan pilih layanan yang tersedia di bawah ini untuk informasi lebih lanjut.
-        </p>
+      
+      {/* MENU INTI PRIVAT */}
+      <div style={{ marginBottom: '40px' }}>
+        <h2 style={{ textAlign: 'center', marginBottom: '24px', fontSize: '1.5rem', color: 'var(--color-gold-light)' }}>
+          MENU INTI PRIVAT
+        </h2>
+        
+        {/* Horizontal scrollable container */}
+        <div style={{ 
+          display: 'flex', 
+          overflowX: 'auto', 
+          gap: '20px', 
+          paddingBottom: '24px',
+          WebkitOverflowScrolling: 'touch',
+          scrollSnapType: 'x mandatory',
+          margin: '0 -20px',
+          padding: '0 20px 24px 20px', // allow scroll past screen edge
+        }}>
+          {privateMenus.map((link, i) => (
+            <div key={i} className="glass-panel" style={{ 
+              minWidth: '280px', 
+              width: '85vw',
+              maxWidth: '320px',
+              flex: '0 0 auto', 
+              scrollSnapAlign: 'start',
+              padding: '20px 16px',
+              display: 'flex',
+              flexDirection: 'column'
+            }}>
+              {renderLinkItem(link, true)}
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-        {linksData.map((link, i) => (
-          <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '8px' }}>
-            <div style={{ padding: '0 8px' }}>
-              <h4 style={{ fontSize: '1rem', color: 'var(--color-gold)', marginBottom: '4px' }}>{link.title}</h4>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{link.desc}</p>
+      {/* INFORMASI DAN LINK LAINNYA */}
+      <div>
+        <h2 style={{ textAlign: 'center', marginBottom: '24px', fontSize: '1.5rem', color: 'var(--color-gold-light)' }}>
+          INFORMASI DAN LINK LAINNYA
+        </h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          {otherLinks.map((link, i) => (
+            <div key={i}>
+              {renderLinkItem(link, false)}
             </div>
-            
-            {link.images ? (
-              <button 
-                onClick={() => setActiveGallery({ title: link.title, images: link.images })} 
-                className="premium-btn w-full text-left" 
-                style={{ background: 'transparent', border: 'none', padding: 0, outline: 'none' }}
-              >
-                <div className="premium-btn" style={{ width: '100%', boxSizing: 'border-box' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <div className="icon-wrapper">
-                      {link.icon}
-                    </div>
-                    <span>{link.btnText}</span>
-                  </div>
-                  <ChevronRight size={20} style={{ color: 'var(--color-gold)' }} />
-                </div>
-              </button>
-            ) : (
-              <a href={link.url} target="_blank" rel="noopener noreferrer" className="premium-btn">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div className="icon-wrapper">
-                    {link.icon}
-                  </div>
-                  <span>{link.btnText}</span>
-                </div>
-                <ChevronRight size={20} style={{ color: 'var(--color-gold)' }} />
-              </a>
-            )}
-
-            {link.waUrl && (
-              <a href={link.waUrl} target="_blank" rel="noopener noreferrer" className="premium-btn" style={{ 
-                marginTop: '-8px', 
-                background: 'linear-gradient(145deg, rgba(37, 211, 102, 0.15) 0%, rgba(18, 140, 126, 0.1) 100%)',
-                borderColor: 'rgba(37, 211, 102, 0.3)'
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div className="icon-wrapper" style={{ background: 'rgba(37, 211, 102, 0.2)', color: '#25D366' }}>
-                    <MessageCircle size={20} />
-                  </div>
-                  <span style={{ color: '#25D366' }}>Daftar via WhatsApp</span>
-                </div>
-                <ChevronRight size={20} style={{ color: '#25D366' }} />
-              </a>
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Gallery Modal Popup */}

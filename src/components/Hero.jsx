@@ -33,24 +33,26 @@ const Hero = () => {
         />
       </div>
       
-      <h1 style={{ fontSize: '2.5rem', marginBottom: '8px', fontWeight: '700' }}>KI PAKU BUMI</h1>
-      
-      <p style={{ color: 'var(--color-gold)', fontWeight: '500', marginBottom: '16px', fontSize: '1.1rem' }}>
-        Master Spiritual<br/>
-        <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-          Pengasuh Padepokan Payung Agung Nusantara<br/>
-          Ketua Umum Pusat Yayasan Ikatan Spiritual Indonesia
-        </span>
-      </p>
-      
-      <div className="glass-panel" style={{ padding: '24px', marginTop: '30px', textAlign: 'left' }}>
-        <h2 style={{ fontSize: '1.5rem', marginBottom: '12px', textAlign: 'center' }}>Gerbang Kesadaran Sejati</h2>
-        <p style={{ lineHeight: '1.7', fontSize: '0.95rem', marginBottom: '16px', color: 'var(--text-main)', textAlign: 'center', fontStyle: 'italic' }}>
-          "Menyelami kedalaman batin, menggali potensi diri berlandaskan kearifan warisan leluhur Nusantara."
+      <div className="glass-panel" style={{ padding: '30px 24px', marginTop: '10px', textAlign: 'center', width: '100%' }}>
+        <h1 style={{ fontSize: '2.5rem', marginBottom: '8px', fontWeight: '700' }}>KI PAKU BUMI</h1>
+        
+        <p style={{ color: 'var(--color-gold)', fontWeight: '500', marginBottom: '24px', fontSize: '1.1rem' }}>
+          Master Spiritual<br/>
+          <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+            Pengasuh Padepokan Payung Agung Nusantara<br/>
+            Ketua Umum Pusat Yayasan Ikatan Spiritual Indonesia
+          </span>
         </p>
-        <p style={{ lineHeight: '1.6', fontSize: '0.95rem', color: 'var(--text-muted)' }}>
-          Kami hadir untuk mendampingi setiap langkah perjalanan spiritual Anda—membimbing pencapaian ketenangan jiwa, penguasaan energi batin, hingga pemahaman keilmuan tingkat tinggi secara terarah, etis, dan profesional. Bersama <strong>Payung Agung Nusantara</strong>, mari wujudkan kualitas hidup yang lebih damai dan bermakna.
-        </p>
+        
+        <div style={{ borderTop: '1px solid rgba(212, 175, 55, 0.2)', paddingTop: '20px', textAlign: 'left' }}>
+          <h2 style={{ fontSize: '1.3rem', marginBottom: '12px', textAlign: 'center', color: 'var(--color-gold-light)' }}>Gerbang Kesadaran Sejati</h2>
+          <p style={{ lineHeight: '1.7', fontSize: '0.95rem', marginBottom: '16px', color: 'var(--text-main)', textAlign: 'center', fontStyle: 'italic' }}>
+            "Menyelami kedalaman batin, menggali potensi diri berlandaskan kearifan warisan leluhur Nusantara."
+          </p>
+          <p style={{ lineHeight: '1.6', fontSize: '0.95rem', color: 'var(--text-muted)', textAlign: 'center' }}>
+            Kami hadir untuk mendampingi setiap langkah perjalanan spiritual Anda—membimbing pencapaian ketenangan jiwa, penguasaan energi batin, hingga pemahaman keilmuan tingkat tinggi secara terarah, etis, dan profesional. Bersama <strong>Payung Agung Nusantara</strong>, mari wujudkan kualitas hidup yang lebih damai dan bermakna.
+          </p>
+        </div>
       </div>
     </div>
   );
