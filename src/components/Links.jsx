@@ -124,7 +124,7 @@ const Links = () => {
       {/* MENU INTI PRIVAT */}
       <div style={{ marginBottom: '50px' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '24px', fontSize: '1.5rem', color: 'var(--color-gold-light)' }}>
-          MENU INTI PRIVAT
+          KELAS PEMBELAJARAN INTI PRIVAT
         </h2>
         
         {/* Horizontal scroll container with small compact boxes */}
