@@ -144,6 +144,12 @@ a {
   animation: glowPulse 3s infinite;
 }
 
+.glow-effect-hover:hover {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  transform: translateY(-4px) !important;
+  border-color: var(--color-gold) !important;
+}
+
 /* Layout utilities */
 .container {
   max-width: 600px;
