@@ -189,17 +189,17 @@ const Links = () => {
               </h4>
               <div style={{
                 marginTop: 'auto',
-                background: 'rgba(212, 175, 55, 0.15)',
+                background: 'rgba(255, 51, 51, 0.15)',
                 padding: '4px 10px',
                 borderRadius: '12px',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '4px',
-                color: 'var(--color-gold)',
+                color: '#ff4d4d',
                 fontSize: '0.75rem',
                 fontWeight: '600',
-                border: '1px solid rgba(212, 175, 55, 0.3)'
-              }} className="pulse-btn">
+                border: '1px solid rgba(255, 51, 51, 0.4)'
+              }} className="pulse-btn-red">
                 <span>Klik Detail</span>
                 <ChevronRight size={14} className="bounce-horizontal" />
               </div>
