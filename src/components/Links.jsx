@@ -3,15 +3,43 @@ import { ChevronRight, GraduationCap, Flame, Sparkles, Store, Music, Users, Came
 
 const sortImages = (globObj) => {
   return Object.keys(globObj).sort((a, b) => {
-    const matchA = a.match(/D-(\d+)/);
-    const matchB = b.match(/D-(\d+)/);
-    if (matchA && matchB) {
-      const numA = parseInt(matchA[1], 10);
-      const numB = parseInt(matchB[1], 10);
+    // 1. D-X pattern sorting
+    const matchDA = a.match(/D-(\d+)/);
+    const matchDB = b.match(/D-(\d+)/);
+    if (matchDA && matchDB) {
+      const numA = parseInt(matchDA[1], 10);
+      const numB = parseInt(matchDB[1], 10);
       if (numA !== numB) {
         return numA - numB;
       }
     }
+    
+    // 2. Leading number & parenthesis sorting (e.g., 3.TINGKAT GURU(1).jpg)
+    const getBaseName = (path) => path.split('/').pop();
+    const baseA = getBaseName(a);
+    const baseB = getBaseName(b);
+    
+    const leadMatchA = baseA.match(/^(\d+)/);
+    const leadMatchB = baseB.match(/^(\d+)/);
+    
+    if (leadMatchA && leadMatchB) {
+      const leadA = parseInt(leadMatchA[1], 10);
+      const leadB = parseInt(leadMatchB[1], 10);
+      if (leadA !== leadB) {
+        return leadA - leadB;
+      }
+      
+      const subMatchA = baseA.match(/\((\d+)\)/);
+      const subMatchB = baseB.match(/\((\d+)\)/);
+      
+      const subA = subMatchA ? parseInt(subMatchA[1], 10) : 0;
+      const subB = subMatchB ? parseInt(subMatchB[1], 10) : 0;
+      
+      if (subA !== subB) {
+        return subA - subB;
+      }
+    }
+
     return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
   }).map(key => globObj[key]);
 };
