@@ -251,6 +251,7 @@ const Links = () => {
           flexDirection: 'column',
           alignItems: 'center',
           overflowY: 'auto',
+          WebkitOverflowScrolling: 'touch',
           backdropFilter: 'blur(10px)'
         }}>
           {/* Header Sticky */}
@@ -337,6 +338,8 @@ const Links = () => {
                     key={idx} 
                     src={imgUrl} 
                     alt={`${activeModal.title} - page ${idx + 1}`} 
+                    loading="lazy"
+                    decoding="async"
                     style={{ 
                       width: '75%', 
                       height: 'auto',
