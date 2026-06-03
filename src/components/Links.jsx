@@ -338,8 +338,9 @@ const Links = () => {
                     src={imgUrl} 
                     alt={`${activeModal.title} - page ${idx + 1}`} 
                     style={{ 
-                      width: '100%', 
-                      height: 'auto', 
+                      width: '75%', 
+                      height: 'auto',
+                      margin: '0 auto', 
                       borderRadius: '12px',
                       boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
                       border: '1px solid rgba(212, 175, 55, 0.2)'
