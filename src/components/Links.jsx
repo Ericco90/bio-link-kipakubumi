@@ -32,8 +32,8 @@ const sortImages = (globObj) => {
       const subMatchA = baseA.match(/\((\d+)\)/);
       const subMatchB = baseB.match(/\((\d+)\)/);
       
-      const subA = subMatchA ? parseInt(subMatchA[1], 10) : 0;
-      const subB = subMatchB ? parseInt(subMatchB[1], 10) : 0;
+      const subA = subMatchA ? parseInt(subMatchA[1], 10) : 999;
+      const subB = subMatchB ? parseInt(subMatchB[1], 10) : 999;
       
       if (subA !== subB) {
         return subA - subB;
