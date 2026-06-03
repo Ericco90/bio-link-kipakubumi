@@ -1,17 +1,32 @@
 import { useState, useEffect } from 'react';
 import { ChevronRight, GraduationCap, Flame, Sparkles, Store, Music, Users, Camera, Video, Globe, MessageCircle, X, Info } from 'lucide-react';
 
+const sortImages = (globObj) => {
+  return Object.keys(globObj).sort((a, b) => {
+    const matchA = a.match(/D-(\d+)/);
+    const matchB = b.match(/D-(\d+)/);
+    if (matchA && matchB) {
+      const numA = parseInt(matchA[1], 10);
+      const numB = parseInt(matchB[1], 10);
+      if (numA !== numB) {
+        return numA - numB;
+      }
+    }
+    return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+  }).map(key => globObj[key]);
+};
+
 const globSpiritualPraktek = import.meta.glob('../assets/privat spiritual siap praktek/*.{jpg,jpeg,png}', { eager: true, query: '?url', import: 'default' });
-const imagesSpiritualPraktek = Object.values(globSpiritualPraktek);
+const imagesSpiritualPraktek = sortImages(globSpiritualPraktek);
 
 const globPaketPadepokan = import.meta.glob('../assets/privat paket padepokan/*.{jpg,jpeg,png}', { eager: true, query: '?url', import: 'default' });
-const imagesPaketPadepokan = Object.values(globPaketPadepokan);
+const imagesPaketPadepokan = sortImages(globPaketPadepokan);
 
 const globPaketKeilmuan = import.meta.glob('../assets/privat paket keilmuan/*.{jpg,jpeg,png}', { eager: true, query: '?url', import: 'default' });
-const imagesPaketKeilmuan = Object.values(globPaketKeilmuan);
+const imagesPaketKeilmuan = sortImages(globPaketKeilmuan);
 
 const globKeilmuanSpiritual = import.meta.glob('../assets/privat keilmuan/*.{jpg,jpeg,png}', { eager: true, query: '?url', import: 'default' });
-const imagesKeilmuanSpiritual = Object.values(globKeilmuanSpiritual);
+const imagesKeilmuanSpiritual = sortImages(globKeilmuanSpiritual);
 
 const Links = () => {
   const [activeModal, setActiveModal] = useState(null);
