@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import LoadingScreen from './components/LoadingScreen';
+import React from 'react';
 import Background from './components/Background';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
@@ -10,15 +9,11 @@ import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
   return (
     <>
-      {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
-      
       <Background />
       
-      <div className="container" style={{ opacity: loading ? 0 : 1, transition: 'opacity 0.5s ease' }}>
+      <div className="container">
         <Hero />
         <Links />
         <Stats />
