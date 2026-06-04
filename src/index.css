@@ -210,7 +210,6 @@ a {
   background-size: 200px 200px;
   animation: starsFloat 100s linear infinite;
   opacity: 0.6;
-  will-change: transform;
 }
 
 @keyframes starsFloat {
@@ -227,7 +226,6 @@ a {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8), 0 0 15px 4px rgba(212, 175, 55, 0.5);
   animation: meteorFall linear infinite;
   opacity: 0;
-  will-change: transform, opacity;
 }
 
 .meteor::before {
