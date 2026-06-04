@@ -11,8 +11,8 @@ const LoadingScreen = ({ onComplete }) => {
       setTimeout(() => {
         setDisplay('none');
         if (onComplete) onComplete();
-      }, 800); // Wait for fade out transition
-    }, 2000); // Show loading screen for 2 seconds
+      }, 400); // Wait for fade out transition
+    }, 400); // Show loading screen for much shorter time for better LCP
 
     return () => clearTimeout(timer);
   }, [onComplete]);

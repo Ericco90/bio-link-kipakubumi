@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
-
 :root {
   --color-bg-dark: #050505;
   --color-bg-light: #111111;
@@ -212,6 +210,7 @@ a {
   background-size: 200px 200px;
   animation: starsFloat 100s linear infinite;
   opacity: 0.6;
+  will-change: transform;
 }
 
 @keyframes starsFloat {
@@ -228,6 +227,7 @@ a {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8), 0 0 15px 4px rgba(212, 175, 55, 0.5);
   animation: meteorFall linear infinite;
   opacity: 0;
+  will-change: transform, opacity;
 }
 
 .meteor::before {

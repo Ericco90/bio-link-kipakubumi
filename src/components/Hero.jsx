@@ -19,6 +19,9 @@ const Hero = () => {
         <img 
           src={profileImg} 
           alt="KI PAKU BUMI" 
+          fetchpriority="high"
+          loading="eager"
+          decoding="sync"
           style={{
             width: '100%',
             height: '100%',
