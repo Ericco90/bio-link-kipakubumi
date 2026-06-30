@@ -111,7 +111,7 @@ const Links = () => {
       desc: 'Informasi organisasi dan legalitas spiritual Indonesia.',
       btnText: 'Buka Website',
       icon: <Globe size={20} />,
-      url: '#'
+      url: 'https://ikatanspiritualindonesia.com/'
     },
     {
       title: 'Facebook',
