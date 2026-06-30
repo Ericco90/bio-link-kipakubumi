@@ -149,7 +149,7 @@ const Links = () => {
         <h4 style={{ fontSize: '1rem', color: 'var(--color-gold)', marginBottom: '4px' }}>{link.title}</h4>
         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{link.desc}</p>
       </div>
-      <a href={link.url} target="_blank" rel="noopener noreferrer" className="premium-btn">
+      <a href={link.url} className="premium-btn">
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <div className="icon-wrapper">
             {link.icon}
@@ -189,7 +189,7 @@ const Links = () => {
                 if (menu.images && menu.waUrl) {
                   setActiveModal(menu);
                 } else if (menu.url) {
-                  window.open(menu.url, '_blank');
+                  window.location.href = menu.url;
                 }
               }}
               style={{ 
